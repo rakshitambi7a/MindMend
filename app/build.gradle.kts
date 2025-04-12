@@ -12,6 +12,9 @@ android {
         minSdk = 21
         targetSdk = 33
         versionCode = 1
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
+
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -45,8 +48,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
 dependencies {
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation ("androidx.appcompat:appcompat:1.4.1")
+    implementation ("androidx.vectordrawable:vectordrawable:1.1.0")
 }
